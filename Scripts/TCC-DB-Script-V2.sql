@@ -108,7 +108,7 @@ idHospital INT NOT NULL,
 idContato INT NOT NULL,
 idTipoContato INT NOT NULL,
 dsContato VARCHAR(50) NOT NULL,
-inContato VARCHAR(100) NULL,
+infoContato VARCHAR(100) NULL,
 
 CONSTRAINT Contatos_PK PRIMARY KEY (idHospital, idContato, idTipoContato),
 CONSTRAINT Contatos_FK1 FOREIGN KEY (idHospital) REFERENCES Hospital (idHospital),
@@ -320,6 +320,8 @@ CONSTRAINT AtendimentosEventos_PK PRIMARY KEY (idAtendimento, idEvento, acAtendi
 CONSTRAINT AtendimentosEventos_FK1 FOREIGN KEY (idAtendimento) REFERENCES Atendimentos (idAtendimento),
 CONSTRAINT AtendimentosEventos_FK2 FOREIGN KEY (idEvento) REFERENCES Evento (idEvento),
 )
+
+-- CRIAR INSERTS DE ATENDIMENTOS PARA SIMULAR
 
 GO
 
