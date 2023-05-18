@@ -106,7 +106,7 @@ INSERT INTO Hospital VALUES (4,'88.466.041/0001-19', 'Hospital e Maternidade D L
 -23.476232382968988, -46.61079992842134, 'ChIJKSRwumn2zpQRnnawniNQS8w');
 INSERT INTO Hospital VALUES (5,'64.507.701/0001-02', 'Hospital e Maternidade E LTDA', 'Hospital E', 
 33, 'Pistoia', '100', NULL, 'Parque Novo Mundo', 'Sao Paulo', 'SP', '02189-000', 
--23.506910871125083, -46.56865477021042, 'ChIJfWg_7zRfzpQRfq0iAat2DYY');
+-23.506910871125083, -46.56865477021042, 'ChIJD7rWZRNfzpQR_RZeg3wqbL4');
 
 GO
 
