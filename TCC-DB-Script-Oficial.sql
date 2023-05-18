@@ -86,6 +86,7 @@ Uf CHAR(2) NOT NULL,
 Cep CHAR(9) NOT NULL,
 Latitude FLOAT NOT NULL,
 Longitude FLOAT NOT NULL,
+idGoogleMaps VARCHAR(100) NULL,
 
 CONSTRAINT Hospital_PK PRIMARY KEY (idHospital),
 CONSTRAINT Hospital_FK1 FOREIGN KEY (idLogradouro) REFERENCES Logradouros (idLogradouro)
@@ -93,19 +94,19 @@ CONSTRAINT Hospital_FK1 FOREIGN KEY (idLogradouro) REFERENCES Logradouros (idLog
 
 INSERT INTO Hospital VALUES (1,'84.946.165/0001-40', 'Hospital e Maternidade A LTDA', 'Hospital A', 
 33, 'Dr. Edson de Melo', '357', NULL, 'Vila Maria', 'Sao Paulo', 'SP', '02122-080', 
--23.511509793821133, -46.583786716042916);
+-23.511509793821133, -46.583786716042916, 'ChIJfWg_7zRfzpQRfq0iAat2DYY');
 INSERT INTO Hospital VALUES (2,'85.182.404/0001-04', 'Hospital e Maternidade B LTDA', 'Hospital B', 
 33, 'Voluntarios da Patria', '2786', NULL, 'Santana', 'Sao Paulo', 'SP', '02402-100', 
--23.495594010219794, -46.625444342874154);
+-23.495594010219794, -46.625444342874154, 'ChIJE1wPy-z3zpQRSQdLy6mH6i8');
 INSERT INTO Hospital VALUES (3,'17.035.551/0001-93', 'Hospital e Maternidade C LTDA', 'Hospital C', 
 33, 'Voluntarios da Patria', '3693', NULL, 'Santana', 'Sao Paulo', 'SP', '02401-200', 
--23.487175659964617, -46.62721324059225);
+-23.487175659964617, -46.62721324059225, 'ChIJa7OyH0r2zpQR2Ec761JjIOU');
 INSERT INTO Hospital VALUES (4,'88.466.041/0001-19', 'Hospital e Maternidade D LTDA', 'Hospital D', 
 4, 'Nova Cantareira', '2398', NULL, 'Agua Fria', 'Sao Paulo', 'SP', '02340-000', 
--23.476232382968988, -46.61079992842134);
+-23.476232382968988, -46.61079992842134, 'ChIJKSRwumn2zpQRnnawniNQS8w');
 INSERT INTO Hospital VALUES (5,'64.507.701/0001-02', 'Hospital e Maternidade E LTDA', 'Hospital E', 
 33, 'Pistoia', '100', NULL, 'Parque Novo Mundo', 'Sao Paulo', 'SP', '02189-000', 
--23.506910871125083, -46.56865477021042);
+-23.506910871125083, -46.56865477021042, 'ChIJfWg_7zRfzpQRfq0iAat2DYY');
 
 GO
 

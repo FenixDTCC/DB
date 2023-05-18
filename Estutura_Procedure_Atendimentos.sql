@@ -64,6 +64,9 @@ INSERT INTO AtendimentosEventos VALUES (1,4,'F',CURRENT_TIMESTAMP)
 UPDATE Atendimentos SET idStatusAtendimento = 4 WHERE idAtendimento = 1
 
 
+
+
+
 SELECT AT.idAtendimento, AT.dtAtendimento,HO.NomeFantasia, ES.dsEspecialidade, SA.dsStatusAtendimento, IA.dsIdentificacaoAtendimento,EV.dsEvento,
 CASE
      WHEN AE.acAtendimento = 'I' THEN 'Inicio'
@@ -77,4 +80,17 @@ INNER JOIN StatusAtendimento SA        WITH (NOLOCK) ON SA.idStatusAtendimento =
 INNER JOIN IdentificacaoAtendimento IA WITH (NOLOCK) ON IA.idIdentificacaoAtendimento = AT.idIdentificacaoAtendimento
 INNER JOIN Hospital HO                 WITH (NOLOCK) ON HO.idHospital = AT.idHospital
 INNER JOIN Evento EV                   WITH (NOLOCK) ON EV.idEvento = AE.idEvento
-ORDER BY AE.mtAtendimento
+--WHERE AT.idAssociado = 1 
+ORDER BY AE.idEvento,AE.mtAtendimento
+
+
+select * from Associado
+SELECT * FROM Atendimentos WHERE idAssociado = 1 
+SELECT * FROM AtendimentosEventos WHERE idAtendimento = (SELECT idAtendimento FROM Atendimentos WHERE idAssociado = 1) order by idEvento, mtAtendimento, acAtendimento DESC
+
+
+SP_HELP AtendimentosEventos
+
+TRUNCATE TABLE Atendimentos
+truncate table AtendimentosEventos
+delete from Atendimentos where idAssociado >= 1
