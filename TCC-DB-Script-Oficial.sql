@@ -274,12 +274,15 @@ idAtendimento INT NOT NULL,
 idHospital INT NOT NULL,
 idEspecialidade INT NOT NULL,
 idTriagem INT NOT NULL,
+idAssociado INT NOT NULL,
 tempoAtendimento INT NOT NULL
 
 CONSTRAINT Atendimentos_PK PRIMARY KEY (senhaAtendimento),
 CONSTRAINT Atendimentos_FK1 FOREIGN KEY (idHospital) REFERENCES Hospitais (idHospital),
 CONSTRAINT Atendimentos_FK2 FOREIGN KEY (idEspecialidade) REFERENCES Especialidades (idEspecialidade),
-CONSTRAINT Atendimentos_FK3 FOREIGN KEY (idTriagem) REFERENCES IdentificacaoAtendimentos (idIdentificacaoAtendimento)
+CONSTRAINT Atendimentos_FK3 FOREIGN KEY (idTriagem) REFERENCES IdentificacaoAtendimentos (idIdentificacaoAtendimento),
+CONSTRAINT Atendimentos_FK4 FOREIGN KEY (idAssociado) REFERENCES Associados (idAssociado)
+
 )
 
 GO
